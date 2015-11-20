@@ -1,0 +1,406 @@
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="https://code.google.com/p/serialchart/wiki/AdvancedFeatures" />
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"domainName": null, "assetVersionPath": "https://ssl.gstatic.com/codesite/ph/5825124916300507488", "token": null, "profileUrl": null, "assetHostPath": "https://ssl.gstatic.com/codesite/ph", "projectName": "serialchart", "loggedInUserEmail": null, "relativeBaseUrl": "", "projectHomeUrl": "/p/serialchart"};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>AdvancedFeatures - 
+ serialchart -
+ 
+ 
+ Seria Chart - Analyse and chart serial data from RS-232 COM ports - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/5825124916300507488/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/5825124916300507488/css/ph_detail.css" >
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="/feeds/p/serialchart/svnchanges/basic?path=/wiki/AdvancedFeatures.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/5825124916300507488/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fserialchart%2Fwiki%2FAdvancedFeatures&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fserialchart%2Fwiki%2FAdvancedFeatures" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="/p/serialchart">
+ <a href="/p/serialchart/">
+ 
+ <img src="https://ssl.gstatic.com/codesite/ph/images/defaultlogo.png" alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="/p/serialchart/"><span itemprop="name">serialchart</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="/p/serialchart/"><span itemprop="description">Seria Chart - Analyse and chart serial data from RS-232 COM ports</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="/p/serialchart/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ <a href="/p/serialchart/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/serialchart/w/list" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/serialchart/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/serialchart/source/checkout"
+ class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/export-to-github/export?project=serialchart">
+ <button>Export to GitHub</button>
+ 
+ </a>
+ 
+ 
+ <div class=gtbc></div>
+</div>
+
+ 
+ <div style="font-weight: bold; color: #c00; margin-top: 5px; margin-left: 13px;">
+ READ-ONLY: This project has been <a href='https://code.google.com/archive/p/serialchart'>archived</a>. For more information see <a href='https://code.google.com/p/support/wiki/ReadOnlyTransition'>this post</a>.
+ </div>
+ 
+
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/serialchart/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" >
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1" >&nbsp;All wiki pages</option>
+ <option value="3" >&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="4" >&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value=""
+ autocomplete="off" ></span>
+ 
+ 
+ 
+ <input type="submit" value="Search" >
+ </form>
+ </span>
+
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+>
+
+ 
+
+
+
+
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tr>
+ 
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <span style="font-size:120%;font-weight:bold">AdvancedFeatures</span>
+ &nbsp;
+ <div> 
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Sat Aug 13 14:11:25 2011">
+ Aug 13, 2011</span>
+ 
+ by 
+
+ <a class="userlink"
+ href="/u/sergiubaluta/">sergiubaluta</a
+>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <h1><a name="Advanced_Serial_Chart_Features"></a>Advanced Serial Chart Features<a href="#Advanced_Serial_Chart_Features" class="section_anchor"></a></h1><p><i>Please note that these features are experimental and might not be available in the download compiled version, please get Qt SDK and compile/run the source code from SVN repository. The new modular design allows you to add new type of ports, decoders, and display filters.</i> </p><p>Basic data chain in the new framework is as follows: </p><p>PORT (RAW DATA FROM SERIAL/USB PORT) -&gt; DECODER(PROCESSES DATA) -&gt; VALUES(displayed on screen/chart) </p><h1><a name="[_setup_]_section"></a><tt>[_setup_] section </tt><a href="#[_setup_]_section" class="section_anchor"></a></h1><h2><a name="port"></a><i>port</i><a href="#port" class="section_anchor"></a></h2><h3><a name="Open_a_usb_COM_port"></a>Open a usb COM port<a href="#Open_a_usb_COM_port" class="section_anchor"></a></h3><pre class="prettyprint">port = COM1</pre><p>see  <a href="/p/serialchart/wiki/ConfigurationFileSyntax">ConfigurationFileSyntax</a>  for related options </p><h3><a name="Open_a_USB_HID_device_(keyboard/mouse/gamepad)"></a>Open a USB HID device (keyboard/mouse/gamepad)<a href="#Open_a_USB_HID_device_(keyboard/mouse/gamepad)" class="section_anchor"></a></h3><pre class="prettyprint">port = HID   
+vid = 0079
+pid = 5d0f</pre><p><i>Tip: use an utility like USBDeview <a href="http://www.nirsoft.net/utils/usb_devices_view.html" rel="nofollow">http://www.nirsoft.net/utils/usb_devices_view.html</a> to find the vendor and product IDs of a specific device (VID/PID).</i> </p><h2><a name="decoder"></a><i>decoder</i><a href="#decoder" class="section_anchor"></a></h2><h3><a name="Specify_CSV_decoding_(default)"></a>Specify CSV decoding (default)<a href="#Specify_CSV_decoding_(default)" class="section_anchor"></a></h3><pre class="prettyprint">decoder = csv</pre><h3><a name="Specify_binary_decoding"></a>Specify binary decoding<a href="#Specify_binary_decoding" class="section_anchor"></a></h3><pre class="prettyprint">decoder = bin</pre><h3><a name="Specify_HDLC-style_decoding"></a>Specify HDLC-style decoding<a href="#Specify_HDLC-style_decoding" class="section_anchor"></a></h3><pre class="prettyprint">decoder =hdlc
+hdlc_esc =7d
+hdlc_sep =7e
+hdlc_xor =20</pre><h2><a name="display"></a><i>display</i><a href="#display" class="section_anchor"></a></h2><h3><a name="Display_raw_data_coming_from_port_(default)"></a>Display <strong>raw</strong> data coming from port (default)<a href="#Display_raw_data_coming_from_port_(default)" class="section_anchor"></a></h3><pre class="prettyprint">display = raw</pre><h3><a name="Display_data_as_a_list_of_values"></a>Display data as a <strong>list</strong> of values<a href="#Display_data_as_a_list_of_values" class="section_anchor"></a></h3><pre class="prettyprint">display = list
+display_sep = ,
+display_skip_transparent = 1</pre><p>Please note that the separator can be specified in <a href="http://en.wikipedia.org/wiki/Percent-encoding" rel="nofollow">Percent Encoded</a> string for example for a TAB separated list use: </p><pre class="prettyprint">display = list
+display_sep = %09</pre><p>Tip: TAB separated values can be easily Copy &amp; Pasted into an Excel spreadsheet. (In Excel use Paste &gt; Paste Special and select Text as format). </p><h3><a name="Display_data_as_HEX_string"></a>Display data as HEX string<a href="#Display_data_as_HEX_string" class="section_anchor"></a></h3><pre class="prettyprint">display = hex</pre><h1><a name="[any_field]_sections"></a><tt>[any field] sections</tt><a href="#[any_field]_sections" class="section_anchor"></a></h1><h3><a name="Specify_data_length/type_for_BIN/HDLC_decodings"></a>Specify data length/type for BIN/HDLC decodings<a href="#Specify_data_length/type_for_BIN/HDLC_decodings" class="section_anchor"></a></h3><pre class="prettyprint">type = byte / sbyte / word / sword / float</pre><h3><a name="Specify_data_Endianness"></a>Specify data Endianness<a href="#Specify_data_Endianness" class="section_anchor"></a></h3><p>see <a href="http://en.wikipedia.org/wiki/Endianness" rel="nofollow">http://en.wikipedia.org/wiki/Endianness</a> </p><pre class="prettyprint">endian  = msbf / lsbf</pre><p>msbf -&gt; most significant byte first   lsbf -&gt; least significant byte first </p><h3><a name="Specify_data_format_for_custom_display_(ex:_display_=_list)"></a>Specify data format for custom display (ex: display = list)<a href="#Specify_data_format_for_custom_display_(ex:_display_=_list)" class="section_anchor"></a></h3><pre class="prettyprint">format = %g / %f / %d / %n / %s / %x</pre><p>%n -&gt; field name </p><p>%f -&gt; float, format as -9.9 </p><p>%g -&gt; float, format as -9.9 or -9.9e+9 whichever is shorter </p><p>%d -&gt; decimal integer </p><p>%s -&gt; raw data for this value </p><p>%x -&gt; hex of raw data </p><p>You can combine formats as follows: </p><pre class="prettyprint">[MyField]
+type = float
+precision = 3
+format = %n = %f</pre><p>will output for ex: </p><p>... , MyField <tt>=</tt> 1.123 , ... </p><h3><a name="Set_precision_of_floats_in_format"></a>Set precision of floats in format<a href="#Set_precision_of_floats_in_format" class="section_anchor"></a></h3><pre class="prettyprint">precision = 6   </pre><p>Here is how this formatting is applied (providing source code) : </p><pre class="prettyprint">v.replace(QByteArray(&quot;%g&quot;),QByteArray::number(packetValues[i].toDouble(),&#x27;g&#x27;,precision));
+v.replace(QByteArray(&quot;%f&quot;),QByteArray::number(packetValues[i].toDouble(),&#x27;f&#x27;,precision));
+v.replace(QByteArray(&quot;%d&quot;),QByteArray::number(packetValues[i].toInt(),&#x27;f&#x27;,0));
+v.replace(QByteArray(&quot;%n&quot;),field.toAscii());
+v.replace(QByteArray(&quot;%s&quot;),packetParts[i]);
+v.replace(QByteArray(&quot;%x&quot;),packetParts[i].toHex());</pre><h3><a name="Using_h_origin_and_pitch_field_parameters"></a>Using <tt>h_origin</tt> and <tt>pitch</tt> field parameters<a href="#Using_h_origin_and_pitch_field_parameters" class="section_anchor"></a></h3><p>Example: </p><pre class="prettyprint">[Field1]
+h_origin = 50
+pitch = 10</pre><p>Use <tt>h_origin</tt> to specify what horizontal line corresponds to the field value of 0. So , in the example above 0 will be charted 50 pixels below the top border of the chart. </p><p>Use <tt>pitch</tt> to specify how many units of field&#x27;s value correspond to 1 pixel on the chart. So in the example above Field1 = 20 will be charted at 50 - 20 / 10 = 48 pixels below the top border of the chart. </p><p>Please note that <tt>h_origin</tt> and <tt>pitch</tt>, just like any other field parameter, can be specified in the <tt>[_default_]</tt> section to apply by default to all fields. </p><p>If no <tt>h_origin</tt> or <tt>pitch</tt> is specified then it is calculated automatically based on field&#x27;s min / max parameters, so that a value of max is always charted on the top-most line of the chart , and min value is charted on the bottom line on the chart.  </p>
+ </div>
+ </div>
+ </td><tr>
+</table>
+ </div>
+
+
+ 
+ 
+ 
+ <form name="delcom" action="../w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="" >
+ <input type="hidden" name="create_time" value="" >
+ <input type="hidden" name="mode" value="" >
+ <input type="hidden" name="pagename" value="AdvancedFeatures" >
+ <input type="hidden" name="token" value="" >
+ </form>
+
+
+ <script src="https://ssl.gstatic.com/codesite/ph/5825124916300507488/js/prettify/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/5825124916300507488/js/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/5825124916300507488/js/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/5825124916300507488/js/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ </body>
+</html>
+
+

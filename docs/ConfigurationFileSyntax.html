@@ -1,0 +1,990 @@
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="https://code.google.com/p/serialchart/wiki/ConfigurationFileSyntax" />
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"relativeBaseUrl": "", "domainName": null, "assetVersionPath": "https://ssl.gstatic.com/codesite/ph/5825124916300507488", "loggedInUserEmail": null, "assetHostPath": "https://ssl.gstatic.com/codesite/ph", "projectName": "serialchart", "projectHomeUrl": "/p/serialchart", "token": null, "profileUrl": null};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>ConfigurationFileSyntax - 
+ serialchart -
+ 
+ 
+ Seria Chart - Analyse and chart serial data from RS-232 COM ports - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/5825124916300507488/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/5825124916300507488/css/ph_detail.css" >
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="/feeds/p/serialchart/svnchanges/basic?path=/wiki/ConfigurationFileSyntax.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/5825124916300507488/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fserialchart%2Fwiki%2FConfigurationFileSyntax&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fserialchart%2Fwiki%2FConfigurationFileSyntax" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="/p/serialchart">
+ <a href="/p/serialchart/">
+ 
+ <img src="https://ssl.gstatic.com/codesite/ph/images/defaultlogo.png" alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="/p/serialchart/"><span itemprop="name">serialchart</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="/p/serialchart/"><span itemprop="description">Seria Chart - Analyse and chart serial data from RS-232 COM ports</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="/p/serialchart/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ <a href="/p/serialchart/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/serialchart/w/list" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/serialchart/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/serialchart/source/checkout"
+ class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/export-to-github/export?project=serialchart">
+ <button>Export to GitHub</button>
+ 
+ </a>
+ 
+ 
+ <div class=gtbc></div>
+</div>
+
+ 
+ <div style="font-weight: bold; color: #c00; margin-top: 5px; margin-left: 13px;">
+ READ-ONLY: This project has been <a href='https://code.google.com/archive/p/serialchart'>archived</a>. For more information see <a href='https://code.google.com/p/support/wiki/ReadOnlyTransition'>this post</a>.
+ </div>
+ 
+
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/serialchart/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" >
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1" >&nbsp;All wiki pages</option>
+ <option value="3" >&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="4" >&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value=""
+ autocomplete="off" ></span>
+ 
+ 
+ 
+ <input type="submit" value="Search" >
+ </form>
+ </span>
+
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+>
+
+ 
+
+
+
+
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tr>
+ 
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <span style="font-size:120%;font-weight:bold">ConfigurationFileSyntax</span>
+ &nbsp;
+ <div> 
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Thu Mar 18 10:27:29 2010">
+ Mar 18, 2010</span>
+ 
+ by 
+
+ <a class="userlink"
+ href="/u/sergiubaluta/">sergiubaluta</a
+>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <p>#Describes Configuration file syntax for SerialChart application (.scc files) </p><h1><a name="Introduction"></a>Introduction<a href="#Introduction" class="section_anchor"></a></h1><p>SerialChart configuration is done through a text file. The general format of the file is as follows: </p><pre class="prettyprint">[section1]
+param1 = value
+param2 = value
+...
+
+[section2]
+param1 = value
+param2 = value</pre><h1><a name="Setup_Section"></a>Setup Section<a href="#Setup_Section" class="section_anchor"></a></h1><p>Each configuration file starts with the <tt>[_setup_]</tt> section, here you can setup global parameters. For example: </p><pre class="prettyprint">[_setup_]
+port=COM3   
+baudrate=57600
+
+width=1000
+height=201
+background_color = white
+
+grid_h_origin = 100
+grid_h_step = 10
+grid_h_color = #EEE
+grid_h_origin_color = #CCC
+
+grid_v_origin = 0
+grid_v_step = 10
+grid_v_color = #EEE
+grid_v_origin_color = transparent</pre><p>Below are the parameters that can be used in the <tt>[_setup_]</tt> section: </p><h3><a name="port"></a>port<a href="#port" class="section_anchor"></a></h3><p>Specifies the communication port to which the software connects. For ex: COM1,COM2,.. </p><h3><a name="baudrate"></a>baudrate<a href="#baudrate" class="section_anchor"></a></h3><p>Baudrate in bps (bits per second). Only certain values are currently supported: 110,300,600,1200,2400,9600,19200,38400,57600,115200.  </p><p><i>Please note that currently no flow control parameters are supported, and parity will default to &quot;none&quot;, stop bits defaults to 1, as these are most common values.</i> </p><h3><a name="width,_height"></a>width, height<a href="#width,_height" class="section_anchor"></a></h3><p>width and height of the chart area in pixels </p><h3><a name="background_color"></a>background_color<a href="#background_color" class="section_anchor"></a></h3><p>Background color of the chart. </p><p><strong>Note about color formats</strong> Please note that colors in .SCC files can be specified in hex format (for ex: #FFF, or #FFFFFF) or named color (white,blue,magenta,pink,gray) see: <a href="http://www.w3.org/TR/SVG/types.html#ColorKeywords" rel="nofollow">http://www.w3.org/TR/SVG/types.html#ColorKeywords</a> . Please note the special value <i>transparent</i> which means &quot;no color&quot;. You can use it if you don&#x27;t want some elements to be drawn at all. </p><h3><a name="grid_h_origin,_grid_v_origin"></a>grid_h_origin, grid_v_origin<a href="#grid_h_origin,_grid_v_origin" class="section_anchor"></a></h3><p>Both horizontal and vertical grids will have an origin axis line, usually of different color from the regular grid lines. These parameters specifies the shift of this line from top/left borders of chart in pixels.  </p><h3><a name="grid_h_origin_color,_grid_v_origin_color"></a>grid_h_origin_color, grid_v_origin_color<a href="#grid_h_origin_color,_grid_v_origin_color" class="section_anchor"></a></h3><p>Color of the grid origin (axis) line. </p><h3><a name="grid_h_step,_grid_v_step"></a>grid_h_step, grid_v_step<a href="#grid_h_step,_grid_v_step" class="section_anchor"></a></h3><p>Draw a grid line at each step of pixels from the origin line. </p><h3><a name="grid_h_color,_grid_v_color"></a>grid_h_color, grid_v_color<a href="#grid_h_color,_grid_v_color" class="section_anchor"></a></h3><p>Color of regular grid lines. </p><h1><a name="Default_and_Field_Sections"></a>Default and Field Sections<a href="#Default_and_Field_Sections" class="section_anchor"></a></h1><p>SerialChart accepts packets in CSV format (other formats might be supported in the future). Each packet comes on a separate line and each field value is separated by comma. Here is an example of sample data that SerialChart would receive: </p><pre class="prettyprint">100,0.50,0.70
+101,0.30,0.50
+102,0.25,0.35</pre><p>The purpose of the following sections in the configuration file is to specify parameters for each field in the packet. For example: </p><pre class="prettyprint">[_default_]
+min=-1
+max=1
+
+[Field1]
+color=gray
+min=0
+max=255
+
+[Field2]
+color=blue
+
+[Field3]
+color=red</pre><p>You can specify parameters that would apply by default to all fields in the <strong><tt>[_default_]</tt></strong> section. These parameters will apply to all field sections unless they will be overridden in the field section by  parameters with the same name.  </p><p>In the example above note that Field2 and Field3 will inherit min=-1 and max=1 from the <tt>[_default_]</tt> section. However Field1 will override these values with min=0 and max=255 </p><p>After you have defined the default parameters, you should define one section for each field that will be received in a packet. Field sections should be in the order in which they are received in the packet. </p><p>The name of field sections can be chosen randomly but should be distinct from the reserved section names <tt>_setup_</tt>, <tt>_default_</tt>. For that matter avoid any names that start and end with <tt>_</tt>. </p><p>Below is an explanation of the parameters accepted in the <tt>[_default_]</tt> and field sections: </p><h3><a name="min,max"></a>min,max<a href="#min,max" class="section_anchor"></a></h3><p>These are the field values that correspond to the top and bottom lines of the chart. In other words if you specify min = -1 and max = 1. A value of -1 will be plotted at the top border of the chart , and a value of 1 will be plotted at the bottom border of the chart. A value of 0 (which is is the midpoint between -1 and 1) will be plotted at the middle of the chart. Field values are linearly mapped from <tt>[min,max]</tt> range to <tt>[0,height]</tt> range where <i>height</i> is  the chart height in pixels, specified in the setup section. </p><h3><a name="color"></a>color<a href="#color" class="section_anchor"></a></h3><p>This is the color used to plot a field value. Use <i>transparent</i> color value if you don&#x27;t want a specific field to be plotted. </p><h3><a name="dash"></a>dash<a href="#dash" class="section_anchor"></a></h3><p>Creates an interrupted line. For example: dash = 3 will render 3 samples then will not render the next 3 samples, then render 3 samples, then again pause for 3 samples and so on... </p>
+ </div>
+ </div>
+ </td><tr>
+</table>
+ </div>
+
+
+ 
+ <div id="wikicommentcol">
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<div class="collapse">
+
+
+ 
+
+
+<div id="commentlist">
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by  project member 
+ 
+ 
+
+ <a class="userlink"
+ href="/u/sergiubaluta/">sergiubaluta</a
+>,
+ 
+ </span>
+ <span class="date" title="Mon Jan 21 20:42:33 2013">Jan 21, 2013</span>
+ <div>
+<div class="commentcontent">
+<p><strong></strong>Experimental feature to send data back over serial connection, good for sending commands,settings, etc to your device:<strong></strong> </p><p>Note below Data box ,there&#x27;s a textbox and Send button. </p><p>Example inputs in the textboxe: </p><p><strong>adsadasdasd</strong> will send ASCII string as typed </p><p><strong>char:65,66,67</strong> will send three chars with codes  66,66,67, same as <strong>ABC</strong> </p><p><strong>short:30555,14,55</strong> will send 2-byte short integers , in the above example total 6 bytes will be sent </p><p><strong>long:68555,4555</strong> will send 4-byte long integers , in the above example total 8 bytes will be sent </p><p><strong>hex:A7ED,1E will send a string that is specified in hex (pairs of 0-F chars), in above example total 3 bytes will be sent </strong></p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">Marwaeld...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Mon Feb  4 12:00:15 2013">Feb 4, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>please,there is error said that the com is used, how can i solve the problem </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink"
+ href="/u/102673276195320529971/">r...@nau.edu</a
+>,
+ 
+ </span>
+ <span class="date" title="Fri Jul 19 14:43:32 2013">Jul 19, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>Hello I am using an Arduino Due. I am trying to see info from an accelerometer at a braud rate of 115200 but it is massively delayed only on this software. I look at the serial monitor on the arduino software and it is an instant change, where as the serial chart delays. How can I fix this? I have the com port and braud rate set correctly. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">fatihene...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Fri Aug 16 08:04:38 2013">Aug 16, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>This is AWESOME. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">marcelo....@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Wed Sep 11 10:51:11 2013">Sep 11, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>Great program, thank you </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink"
+ href="/u/101360222203993832290/">ndp5...@gmail.com</a
+>,
+ 
+ </span>
+ <span class="date" title="Mon Sep 16 13:47:32 2013">Sep 16, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>Hi, </p><p>awesome program!! I&#x27;m trying to use decoder=bin, type=byte, and I send one byte repeating to serial chart every 25ms nothing displays in the data field or graph not sure what i am missing, please help </p><p>(when decoder=csv all works ok) how can I get this working? please help </p><p>Daniel </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">serkanci...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Wed Oct  2 03:20:17 2013">Oct 2, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>What a useful program! Thank You. </p><p>Let me give a wish: I would like to plot x,y chart instead of x,time chart when the serial is printing the data in a format like x,y. It should be easy for you to add this property to the program, right? </p><p>Cheers. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink"
+ href="/u/105966635990036081950/">paulfj...@gmail.com</a
+>,
+ 
+ </span>
+ <span class="date" title="Fri Nov 29 08:16:20 2013">Nov 29, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>Hello, </p><p>Thanks for this usefull program .. A big help for debugging ascii flow of numeric data comming from a microcontroler.. </p><p>One question:  is it possible to change the delimiter &quot;,&quot; by &quot;;&quot; or other char ? </p><p>paul </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">liuwanxi...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Tue Jan 21 11:14:56 2014">Jan 21, 2014</span>
+ <div>
+<div class="commentcontent">
+<p>Hi, the program is extremely useful! I wonder if I could save the data and the chart after I stop running the configuration?  Thanks! </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink"
+ href="/u/100367136103229206624/">ed...@nyro.co.uk</a
+>,
+ 
+ </span>
+ <span class="date" title="Fri May  9 09:16:08 2014">May 9, 2014</span>
+ <div>
+<div class="commentcontent">
+<p>Would be fantastic if it could log the data to at the same time. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">Holta...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Wed Jul 30 09:23:03 2014">Jul 30, 2014</span>
+ <div>
+<div class="commentcontent">
+<p>I&#x27;m excited to use this program however I&#x27;m using a bluetooth serial port, and it won&#x27;t connect. Any chance this can be included? </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink"
+ href="/u/107610390793168450417/">mikeju...@gmail.com</a
+>,
+ 
+ </span>
+ <span class="date" title="Thu Aug 21 13:07:31 2014">Aug 21, 2014</span>
+ <div>
+<div class="commentcontent">
+<p>Fantastic! </p><p>Another who would LOVE this to log data :) :thumbs up: </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">kirit.ch...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Wed Nov 12 06:23:45 2014">Nov 12, 2014</span>
+ <div>
+<div class="commentcontent">
+<p>Brilliant work.. :)  </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">roland.f...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Thu Dec 18 05:51:13 2014">Dec 18, 2014</span>
+ <div>
+<div class="commentcontent">
+<p>very nice work ! </p><p>my idea: </p><p>add legend = write a description/title of the line in gight top corner (in color of the line) </p><p>title=Temperture </p><p>THANK YOU </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">roland.f...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Thu Dec 18 06:05:56 2014">Dec 18, 2014</span>
+ <div>
+<div class="commentcontent">
+<p>even more ideas ;-) </p><p>automatic serial port ON OFF <blockquote>if avrdude.exe is running then stop serial port else activate it 
+</blockquote></p><p>data GRID <blockquote>write the parsed csv to a grid  
+</blockquote></p><p>i know.. many people have many ideas .. just a few people realy make this nice things.. you are one of them :-) </p><p>thanks again </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">mike.me...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Wed Apr  1 01:23:53 2015">Apr 1, 2015</span>
+ <div>
+<div class="commentcontent">
+<p>I can not get communication with Teensy31 on  COM22 ??  Any tips? </p><p>Mike </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">mike.me...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Thu Apr  9 00:14:59 2015">Apr 9, 2015</span>
+ <div>
+<div class="commentcontent">
+<p>Teensy now working fine - code issue ! </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">arixrobo...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Mon May 18 16:08:18 2015">May 18, 2015</span>
+ <div>
+<div class="commentcontent">
+<p>thank you for this fantastic (and simple) piece of software! </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+</div>
+</div>
+
+ 
+
+
+ <script type="text/javascript">
+ function delComment(sequence_num, create_time, delete_mode) {
+ var f = document.forms["delcom"];
+ f.sequence_num.value = sequence_num;
+ f.create_time.value = create_time;
+ f.mode.value = delete_mode;
+ f.submit();
+ return false;
+ }
+ </script>
+
+
+ </div>
+ 
+ 
+ 
+ <form name="delcom" action="../w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="" >
+ <input type="hidden" name="create_time" value="" >
+ <input type="hidden" name="mode" value="" >
+ <input type="hidden" name="pagename" value="ConfigurationFileSyntax" >
+ <input type="hidden" name="token" value="" >
+ </form>
+
+
+ <script src="https://ssl.gstatic.com/codesite/ph/5825124916300507488/js/prettify/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/5825124916300507488/js/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/5825124916300507488/js/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/5825124916300507488/js/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ </body>
+</html>
+
+
